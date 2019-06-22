@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  spyserver:
+    restart: unless-stopped
+    privileged: true
+    image: lloydpick/dump1090:latest
+    devices:
+      - "/dev/bus/usb"
+    cap_add:
+      - SYS_NICE

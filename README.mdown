@@ -1,0 +1,17 @@
+# Docker dump1090
+
+Docker container for [FlightAware dump1090](https://github.com/flightaware/dump1090), with support for arm, arm64 and amd64.
+
+[![](https://images.microbadger.com/badges/version/lloydpick/dump1090.svg)](https://microbadger.com/images/lloydpick/dump1090) [![](https://images.microbadger.com/badges/image/lloydpick/dump1090.svg)](https://microbadger.com/images/lloydpick/dump1090) https://hub.docker.com/r/lloydpick/dump1090
+
+## Summary
+
+The container provides you with the FlightAware dump1090 application. It has been tested with an RTL-SDR R820T2 RTL2832U device on a Raspberry Pi 3 Model B+. There is a [docker-compose.yml](https://github.com/lloydpick/docker-spyserver/blob/master/docker-compose.yml) file should you want to see how to correctly mount the USB device.
+
+### Example
+
+See [docker-compose.yml](https://github.com/lloydpick/docker-dump1090/blob/master/docker-compose.yml)
+
+### Rebuilding
+
+If you wish to rebuild this image for yourself, you can use the [Dockerfile](https://github.com/lloydpick/docker-dump1090/blob/master/Dockerfile) provided. However, the image that exists on DockerHub was built using the Docker experimental `buildx` functionality to build the `arm` version from a Mac. You can view the build command in the [Makefile](https://github.com/lloydpick/docker-dump1090/blob/master/Makefile).
