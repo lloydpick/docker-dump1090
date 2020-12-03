@@ -8,7 +8,7 @@ FROM base as build
 RUN apk add --no-cache curl ca-certificates coreutils make gcc pkgconf libc-dev
 RUN apk add --no-cache libusb-dev ncurses-dev librtlsdr-dev
 
-ARG DUMP1090_VERSION=v3.7.1
+ARG DUMP1090_VERSION=v4.0
 
 RUN mkdir /dump1090
 WORKDIR /dump1090
