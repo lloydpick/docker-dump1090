@@ -1,14 +1,12 @@
 FROM alpine:3.12 as base
 
-RUN echo '@edge http://dl-cdn.alpinelinux.org/alpine/edge/main' >> /etc/apk/repositories
-RUN echo '@testing http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories
-RUN apk add --no-cache tini librtlsdr@testing libusb ncurses-libs
+RUN apk add --no-cache tini librtlsdr libusb ncurses-libs
 
 
 FROM base as build
 
 RUN apk add --no-cache curl ca-certificates coreutils make gcc pkgconf libc-dev
-RUN apk add --no-cache libusb-dev ncurses-dev librtlsdr-dev@testing
+RUN apk add --no-cache libusb-dev ncurses-dev librtlsdr-dev
 
 ARG DUMP1090_VERSION=v3.7.1
 
