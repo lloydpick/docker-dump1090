@@ -1,4 +1,4 @@
-FROM alpine:3.12 as base
+FROM alpine:3.14.0 as base
 
 RUN apk add --no-cache tini librtlsdr libusb ncurses-libs
 
